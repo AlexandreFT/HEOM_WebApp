@@ -35,7 +35,7 @@ if(isset($_GET['action']))
         /*Insert data.*/
         $insertSql = "INSERT INTO heom.pacientes (Column_1, paciente_id,registro_hosp,prim_nome,ult_nome,
         nome_completo,sexo,data_nascim,fumante_status,telefone)
-                      VALUES (?,?,?,?,?,?,?,?,?)";
+                      VALUES (?,?,?,?,?,?,?,?,?,?)";
         $params = array(&$_POST['Column_1'],
                         &$_POST['paciente_id'],
                         &$_POST['registro_hosp'],
