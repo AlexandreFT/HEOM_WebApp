@@ -6,16 +6,38 @@
 <body>
 <form method="post" action="?action=add" enctype="multipart/form-data" >
     Column_1 <input type="text" name="Column_1" id="Column_1"/></br>
+
     Paciente ID <input type="text" name="paciente_id" id="paciente_id"/></br>
+
     Registro do Hospital <input type="text" name="registro_hosp" id="registro_hosp"/></br>
+
     Primeiro Nome <input type="text" name="prim_nome" id="prim_nome"/></br>
+
     Último Nome <input type="text" name="ult_nome" id="ult_nome"/></br>
+
     Nome Completo <input type="text" name="nome_completo" id="nome_completo"/></br>
-    Sexo <input type="text" name="sexo" id="sexo"/></br>
-    Data de Nascimento <input type="text" name="data_nascim" id="data_nascim"/></br>
-    Fumante? <input type="text" name="fumante_status" id="fumante_status"/></br>
+
+    Sexo
+    <input type="radio" id="M" name="sexo" value="M">
+    <label for="M">Masculino</label><br>
+    <input type="radio" id="F" name="sexo" value="F">
+    <label for="F">Feminino</label><br>
+
+    Data de Nascimento
+    <input type="date" name="data_nascim" id="data_nascim"/></br>
+
+    O(a) paciente é fumante?
+    <input type="radio" id="Sim" name="fumante_status" value="Sim">
+    <label for="Sim">Sim</label><br>
+    <input type="radio" id="Ex-Fumante" name="fumante_status" value="Ex-Fumante">
+    <label for="F">Ex-Fumante</label><br>
+    <input type="radio" id="Não" name="fumante_status" value="Não">
+    <label for="F">Não</label><br>
+    
     Telefone <input type="text" name="telefone" id="telefone"/></br>
+
     <input type="submit" name="submit" value="Submit" />
+
 </form>
 <?php
 /*Connect using SQL Server authentication.*/
