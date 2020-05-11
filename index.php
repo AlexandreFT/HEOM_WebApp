@@ -32,7 +32,7 @@ if(isset($_GET['action']))
     if($_GET['action'] == 'add')
     {
         /*Insert data.*/
-        $insertSql = "INSERT INTO pacientes (paciente_id,registro_hosp,prim_nome,ult_nome,
+        $insertSql = "INSERT INTO heom.pacientes (paciente_id,registro_hosp,prim_nome,ult_nome,
         nome_completo,sexo,data_nascim,fumante_status,telefone)
                       VALUES (?,?,?,?,?,?,?,?,?)";
         $params = array(&$_POST['paciente_id'],
