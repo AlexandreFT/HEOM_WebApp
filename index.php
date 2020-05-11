@@ -5,6 +5,7 @@
 </head>
 <body>
 <form method="post" action="?action=add" enctype="multipart/form-data" >
+    Column_1 <input type="text" name="Column_1" id="Column_1"/></br>
     Paciente ID <input type="text" name="paciente_id" id="paciente_id"/></br>
     Registro do Hospital <input type="text" name="registro_hosp" id="registro_hosp"/></br>
     Primeiro Nome <input type="text" name="prim_nome" id="prim_nome"/></br>
@@ -32,10 +33,11 @@ if(isset($_GET['action']))
     if($_GET['action'] == 'add')
     {
         /*Insert data.*/
-        $insertSql = "INSERT INTO heom.pacientes (paciente_id,registro_hosp,prim_nome,ult_nome,
+        $insertSql = "INSERT INTO heom.pacientes (Column_1, paciente_id,registro_hosp,prim_nome,ult_nome,
         nome_completo,sexo,data_nascim,fumante_status,telefone)
                       VALUES (?,?,?,?,?,?,?,?,?)";
-        $params = array(&$_POST['paciente_id'],
+        $params = array(&$_POST['Column_1'],
+                        &$_POST['paciente_id'],
                         &$_POST['registro_hosp'],
                         &$_POST['prim_nome'],
                         &$_POST['ult_nome'],
