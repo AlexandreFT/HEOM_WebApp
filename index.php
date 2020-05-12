@@ -17,26 +17,27 @@
 
     Nome Completo <input type="text" name="nome_completo" id="nome_completo"/></br>
 
-    Sexo
-    <input type="radio" id="M" name="sexo" value="M">
-    <label for="M">Masculino</label><br>
-    <input type="radio" id="F" name="sexo" value="F">
-    <label for="F">Feminino</label><br>
+    <label for="sexo">Sexo</label><br>
+        <input type="radio" id="M" name="sexo" value="M">
+        <label for="M">Masculino</label><br>
+        <input type="radio" id="F" name="sexo" value="F">
+        <label for="F">Feminino</label><br>
 
-    Data de Nascimento
+        <label for="data_nascim">Data de Nascimento</label><br>
     <input type="date" name="data_nascim" id="data_nascim"/></br>
 
-    O(a) paciente é fumante?
-    <input type="radio" id="Sim" name="fumante_status" value="Sim">
-    <label for="Sim">Sim</label><br>
-    <input type="radio" id="Ex-Fumante" name="fumante_status" value="Ex-Fumante">
-    <label for="F">Ex-Fumante</label><br>
-    <input type="radio" id="Não" name="fumante_status" value="Não">
-    <label for="F">Não</label><br>
+    <label for="fumante_status">O(a) paciente é fumante?</label><br>
+        <input type="radio" id="Sim" name="fumante_status" value="Sim">
+        <label for="Sim">Sim</label><br>
+        <input type="radio" id="Ex-Fumante" name="fumante_status" value="Ex-Fumante">
+        <label for="F">Ex-Fumante</label><br>
+        <input type="radio" id="Não" name="fumante_status" value="Não">
+        <label for="F">Não</label><br>
     
-    Telefone <input type="text" name="telefone" id="telefone"/></br>
+    <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}">
 
-    <input type="submit" name="submit" value="Submit" />
+    <input type="submit" name="submit" value="Cadastrar Paciente" />
 
 </form>
 <?php
