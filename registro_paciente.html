@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <Title>HEOM - Hospital Especializado Octávio Mangabeira</Title>
+    <link rel="stylesheet" href="CSS/registro_paciente.css.css">
+</head>
+<body>
+
+<div class = "wrapper">
+    <div class="title">
+        Registro de Novos Pacientes
+    </div>
+    <div class="form">
+        <div class="input_field">
+            <label>Número de Registro no Hospital</label>
+            <input type="text" class="input" id="registro_hosp">
+        </div>
+        <div class="input_field">
+            <label>Nome Completo</label>
+            <input type="text" class="input" id = "nome_completo">
+        </div>
+        <div class="input_field">
+            <label>Telefone</label>
+            <input type="text" class="input" id = "telefone">
+        </div>
+        <div class="input_field">
+            <label>Sexo</label>
+            <div class="custom_select">
+                <select id="sexo">
+                    <option value="">Selecionar</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                </select>
+            </div>
+        </div>
+        <div class="input_field">
+            <label>O(a) paciente é fumante?</label>
+            <div class="custom_select">
+                <select id="fumante_status">
+                    <option value="">Selecionar</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Ex-Fumante">Ex-Fumante</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="text" class="input" name = "Column_1" id = "Column_1"  placeholder = "Column_1">
+            <input type="text" class="input" name = "paciente_id" id = "paciente_id"  placeholder = "Paciente ID">
+            <input type="text" class="input" name = "registro_hosp" id = "registro_hosp" placeholder = "Registro no Hospital">
+            <input type="text" class="input" name = "prim_nome" id = "prim_nome" placeholder = "Primeiro Nome">
+        
+
+<form method="post" action="?action=add" enctype="multipart/form-data" >
+    Column_1 <input type="text" name="Column_1" id="Column_1"/></br>
+
+    Paciente ID <input type="text" name="paciente_id" id="paciente_id"/></br>
+
+    Registro do Hospital <input type="text" name="registro_hosp" id="registro_hosp"/></br>
+
+    Primeiro Nome <input type="text" name="prim_nome" id="prim_nome"/></br>
+
+    Último Nome <input type="text" name="ult_nome" id="ult_nome"/></br>
+
+    Nome Completo <input type="text" name="nome_completo" id="nome_completo"/></br>
+
+    <label for="sexo">Sexo</label><br>
+        <input type="radio" id="M" name="sexo" value="M">
+        <label for="M">Masculino</label><br>
+        <input type="radio" id="F" name="sexo" value="F">
+        <label for="F">Feminino</label><br>
+
+        <label for="data_nascim">Data de Nascimento</label><br>
+    <input type="date" name="data_nascim" id="data_nascim"/></br>
+
+    <label for="fumante_status">O(a) paciente é fumante?</label><br>
+        <input type="radio" id="Sim" name="fumante_status" value="Sim">
+        <label for="Sim">Sim</label><br>
+        <input type="radio" id="Ex-Fumante" name="fumante_status" value="Ex-Fumante">
+        <label for="F">Ex-Fumante</label><br>
+        <input type="radio" id="Não" name="fumante_status" value="Não">
+        <label for="F">Não</label><br>
+    
+    <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}">
+
+    <input type="submit" name="submit" value="Cadastrar Paciente" />
+
+</form>
+</body>
+</html>

@@ -1,45 +1,3 @@
-
-<html>
-<head>
-<Title>HEOM - Hospital Especializado Octávio Mangabeira</Title>
-</head>
-<body>
-<form method="post" action="?action=add" enctype="multipart/form-data" >
-    Column_1 <input type="text" name="Column_1" id="Column_1"/></br>
-
-    Paciente ID <input type="text" name="paciente_id" id="paciente_id"/></br>
-
-    Registro do Hospital <input type="text" name="registro_hosp" id="registro_hosp"/></br>
-
-    Primeiro Nome <input type="text" name="prim_nome" id="prim_nome"/></br>
-
-    Último Nome <input type="text" name="ult_nome" id="ult_nome"/></br>
-
-    Nome Completo <input type="text" name="nome_completo" id="nome_completo"/></br>
-
-    <label for="sexo">Sexo</label><br>
-        <input type="radio" id="M" name="sexo" value="M">
-        <label for="M">Masculino</label><br>
-        <input type="radio" id="F" name="sexo" value="F">
-        <label for="F">Feminino</label><br>
-
-        <label for="data_nascim">Data de Nascimento</label><br>
-    <input type="date" name="data_nascim" id="data_nascim"/></br>
-
-    <label for="fumante_status">O(a) paciente é fumante?</label><br>
-        <input type="radio" id="Sim" name="fumante_status" value="Sim">
-        <label for="Sim">Sim</label><br>
-        <input type="radio" id="Ex-Fumante" name="fumante_status" value="Ex-Fumante">
-        <label for="F">Ex-Fumante</label><br>
-        <input type="radio" id="Não" name="fumante_status" value="Não">
-        <label for="F">Não</label><br>
-    
-    <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}">
-
-    <input type="submit" name="submit" value="Cadastrar Paciente" />
-
-</form>
 <?php
 /*Connect using SQL Server authentication.*/
 $serverName = "tcp:heom.database.windows.net,1433";
@@ -56,7 +14,7 @@ if(isset($_GET['action']))
     if($_GET['action'] == 'add')
     {
         /*Insert data.*/
-        $insertSql = "INSERT INTO heom.pacientes (Column_1, paciente_id,registro_hosp,prim_nome,ult_nome,
+        $insertSql = "INSERT INTO heom.pacientes_php_test (Column_1, paciente_id,registro_hosp,prim_nome,ult_nome,
         nome_completo,sexo,data_nascim,fumante_status,telefone)
                       VALUES (?,?,?,?,?,?,?,?,?,?)";
         $params = array(&$_POST['Column_1'],
@@ -86,7 +44,7 @@ if(isset($_GET['action']))
         }
         else
         {
-            echo "Registration complete.</br>";
+            echo "Paciente registrado com sucesso!</br>";
         }
     }
 }
@@ -116,5 +74,3 @@ if(sqlsrv_has_rows($stmt))
     print("</table>");
 }*/
 ?>
-</body>
-</html>
