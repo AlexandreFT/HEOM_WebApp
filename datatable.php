@@ -9,9 +9,31 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
   
         <link rel="stylesheet" href="datatable.css">
+
+        <link rel="stylesheet" href="index.css">
     </head>
 
     <body>
+
+        <nav>
+
+            <div class="logo">
+                <h1><a href="index.html">Hospdata</a></h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="datatable.php">Datatable Dev</a></li>
+                <li><a href="gethint.html">GetHint</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+         </nav>
 
         Search:
 
