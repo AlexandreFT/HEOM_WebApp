@@ -39,7 +39,7 @@
 
         Search:
 
-        <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25' class="dataTable">
+        <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25' class="table.dataTable">
 
             <thead>
                 <th>Column_1</th>
