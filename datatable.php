@@ -41,6 +41,25 @@
                         die(print_r(sqlsrv_errors(), true));
                     }
 
+                    $query = sqlsrv_query($conn, "SELECT * from [pacientes]")
+
+                    while ($result = sqlsrv_fetch_array($query)) {
+                        echo "
+                            <tr>
+                                <td>".$result['Column_1']."</td>
+                                <td>".$result['paciente_id']."</td>
+                                <td>".$result['registro_hosp']."</td>
+                                <td>".$result['prim_nome']."</td>
+                                <td>".$result['ult_nome']."</td>
+                                <td>".$result['nome_completo']."</td>
+                                <td>".$result['sexo']."</td>
+                                <td>".$result['data_nascim']."</td>
+                                <td>".$result['fumante_status']."</td>
+                                <td>".$result['telefone']."</td>
+                            </tr>
+                        ";
+                    }
+
                 ?>
 
 
