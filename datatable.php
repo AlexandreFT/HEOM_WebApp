@@ -12,7 +12,9 @@
 
     <body>
 
-        <table id="pacientes">
+        Search:
+
+        <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25'>
 
             <thead>
                 <th>Column_1</th>
@@ -76,7 +78,11 @@
         <script type="text/javascript">
 
             $(document).ready( function () {
-                $('#pacientes').DataTable();
+                $('#pacientes').DataTable( {
+                    paging: false,
+                    scrollY: 400,
+                    searching: true
+                });
             } );
 
         </script>  
