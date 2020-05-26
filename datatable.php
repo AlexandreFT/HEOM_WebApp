@@ -4,6 +4,8 @@
     <head>
         <title>Dynamic Content from Azure SQL Database</title>
 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
@@ -37,7 +39,7 @@
 
         Search:
 
-        <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+        <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25' class="dataTable">
 
             <thead>
                 <th>Column_1</th>
