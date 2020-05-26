@@ -37,7 +37,7 @@
 
          </nav>
 
-        Search:
+        Search1:
 
         <table id="pacientes" data-order='[[ 1, "asc" ]]' data-page-length='25' class="table.dataTable">
 
