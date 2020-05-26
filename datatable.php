@@ -41,7 +41,7 @@
                         die(print_r(sqlsrv_errors(), true));
                     }
 
-                    $query = sqlsrv_query($conn, "SELECT * from [pacientes]");
+                    $query = sqlsrv_query($conn, "SELECT * FROM [heom].[pacientes]");
 
                     while ($result = sqlsrv_fetch_array($query)) {
                         echo "
